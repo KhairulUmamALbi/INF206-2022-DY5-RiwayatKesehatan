@@ -1,0 +1,14 @@
+body{
+font-family: 'Times New Roman', Times, serif;
+background: rgba(240, 255, 240, 1);
+position: center;
+}
+
+.header{
+    height: auto;
+    width: 170px;
+    margin: 0 auto;
+    background: aquamarine;
+    text-align: center;
+    position: relative;
+}
