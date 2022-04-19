@@ -18,7 +18,7 @@
         <tr>
             <td>NIK</td>
             <td>:</td>
-            <td><input type="number"></td>
+            <td><input type="text"></td>
         </tr>
 
         <tr>
