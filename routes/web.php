@@ -32,3 +32,7 @@ Route::get('/riwayat/2/edit', function () {
 Route::get('/riwayat/3/edit', function () {
     return view('edit');
 });
+
+Route::put('/riwayat/1', function () {
+    return view('update');
+});
