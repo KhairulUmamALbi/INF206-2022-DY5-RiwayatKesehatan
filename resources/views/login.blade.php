@@ -22,7 +22,7 @@
                     <input type="text" name="username" placeholder="Username"><br>
                     <label>Password</label><br>
                     <input type="password" name="password" placeholder="Password"><br><br>
-                    <button>Log in</button> <button>Register</button><br>
+                    <button>Log in</button> <button><a class ="nav-link" href="/registrasi">Register</a></button><br>
                 </form>
             </div>
 
