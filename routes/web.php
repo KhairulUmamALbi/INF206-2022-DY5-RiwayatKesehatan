@@ -16,3 +16,19 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('login');
 });
+
+Route::get('/riwayat', function () {
+    return view('Riwayat');
+});
+
+Route::get('/riwayat/1/edit', function () {
+    return view('edit');
+});
+
+Route::get('/riwayat/2/edit', function () {
+    return view('edit');
+});
+
+Route::get('/riwayat/3/edit', function () {
+    return view('edit');
+});
