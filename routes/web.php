@@ -33,13 +33,11 @@ Route::get('/riwayat/2/edit', function () {
 Route::get('/riwayat/3/edit', function () {
     return view('edit');
 });
-<<<<<<< HEAD
 
 Route::put('/riwayat/1', function () {
     return view('update');
 });
-=======
-=======
+
 Route::get('/registrasi', function () {
     return view('registrasi');
 });
@@ -48,5 +46,3 @@ Route::get('/profil', function () {
     return view('profil');
 });
 
-
->>>>>>> 2008107010068
