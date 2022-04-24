@@ -7,29 +7,26 @@
     <link rel="stylesheet" href="css/bg.css">
     <!-- bootstrap -->
     <link rel="stylesheet" type="text/css" href="asset/css/bootstrap.css">
-
     <title>dashboard</title>
 
 </head>
 <!-- begin navbar -->
 <nav navbar-expand-lg navbar-light bg-light>
     <div class="row" >
-            <div class="col-md-12" >
+            <div class="col-xl-12" >
     <div class="container">
-            
-                
                 <ul class="nav justify-content-end ">
                     <li class="nav-item ">
-                        <a class="nav-link" href="#">beranda</a>
+                        <a class="nav-link" href="dashboard.blank.php">beranda</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">profil</a>
+                        <a class="nav-link" href="profil.blade.php">profil</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Panduan Layana</a>
+                        <a class="nav-link" href="#">Panduan Layanan</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Log out</a>
+                        <a class="nav-link" href="login.blade.php">Log out</a>
                     </li>
                 </ul>
                     </div>
@@ -52,8 +49,17 @@
 
 <footer>
     <div class="footer">
+        <div class="card-footer bg-light">
+                <div class="col-md-12">
+                    <div class="text-center">
+                <p>Copyright &copy; 2020 Riwayat Kesehatan</p>
+                <p>Call Center : 082211223344</p>
+                        </div>
+                </div>
+            </div>
+            </div>
         
-        </div>
+        
 </footer>
 <!-- script js -->
     <script type="text/javascript" src="asset/js/jquery.js"></script>

@@ -9,13 +9,13 @@ body{
 }
 
 nav{
-    background-color: rgba(0, 0, 255, 0.683)  !important;
+    background-color: rgba(0, 0, 255, 0.683);
 }
 
-/* .nav-link{
+.nav-link{
     color: white;
     float: left;
-} */
+}
 
 .nav-link{
     margin-top: 0px;
@@ -40,4 +40,22 @@ nav{
 .nav-link ul li a:hover{
     background-color: #FFF;
     color: #070707;
+}
+
+
+footer{
+    position: absolute;
+    bottom: 0;
+    top: 100%;
+    width: 100%;
+    color: black;
+    text-align: left;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+fotter p{
+    font-size: 10px;
+    color: black;
+    text-align: right;
 }
