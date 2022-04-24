@@ -110,6 +110,5 @@
           <div class="form-group">
             <label class="control-label" for="subjek">subjek</label?
             <input type="text" name="subjek" class="form-control" id="subjek" required>
-            
 </body>
 </html>
