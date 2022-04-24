@@ -22,7 +22,8 @@
                     <input type="text" name="username" placeholder="Username"><br>
                     <label>Password</label><br>
                     <input type="password" name="password" placeholder="Password"><br><br>
-                    <button>Log in</button><br>
+                    <button><a class ="nav-link" href="/dashboard">Log in</a></button> 
+                    <button><a class ="nav-link" href="/registrasi">Register</a></button><br>
                 </form>
             </div>
 
@@ -33,5 +34,4 @@
     </footer>
 </body>
 </html>
-
 <?php /**PATH C:\xampp\htdocs\INF206-2022-DY5-RiwayatKesehatan\resources\views/login.blade.php ENDPATH**/ ?>
