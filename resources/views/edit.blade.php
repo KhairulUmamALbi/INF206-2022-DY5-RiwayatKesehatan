@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RIWAYAT</title>
+    <title>Edit</title>
 	<style>
 		
 
@@ -53,13 +53,13 @@
     <table class="table"  style="padding-top:30px;">
       <thead>
         <tr>
-          <th scope="col">No</th>
-          <th scope="col">Subjek</th>
-          <th scope="col">Objek</th>
-          <th scope="col">Diagnosa</th>
-          <th scope="col">Terapi</th>
-          <th scope="col">Pemeriksa</th>
-          <th scope="col">Tanggal</th>
+          <th>No</th>
+          <th>Subjek</th>
+          <th>Objek</th>
+          <th>Diagnosa</th>
+          <th>Terapi</th>
+          <th>Pemeriksa</th>
+          <th>Tanggal</th>
         </tr>
         </thead>
         <tbody>
@@ -91,14 +91,24 @@
           <td> <input type="text" class="form-control " style="padding-right:60px"  ></td>
       </tr>
       </tbody>
-    </table>
-        
-    <tr>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td><input type="submit" name="submit" value="Simpan"/>
-      <input type="reset" name="reset" value="Batal" /></td>
-    </tr>
- 
+    </table> 
+    <button class="btn btn-info btn-xs"><i class="fa fa-edit"></i> Simpan</button>
+          <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Hapus</button>
+        </td>
+        </tr>
+      <button type="button" class="btn btn-success"data-toggle="modal" data-target="#tambah">Tambah Data</button>
+
+      <div id="tambah" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Tambah Data</h4>
+      </div>
+      <form method="post" encytype="multipart/form-data">
+        <div class="modal-body">
+          <div class="form-group">
+            <label class="control-label" for="subjek">subjek</label?
+            <input type="text" name="subjek" class="form-control" id="subjek" required>
 </body>
 </html>

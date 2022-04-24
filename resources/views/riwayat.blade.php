@@ -53,16 +53,15 @@
 
     <table class="table" style="padding-top:30px;">
       <thead>
-        <tr>
-          <th scope="col">No</th>
-          <th scope="col">Subjek</th>
-          <th scope="col">Objek</th>
-          <th scope="col">Diagnosa</th>
-          <th scope="col">Terapi</th>
-          <th scope="col">Pemeriksa</th>
-          <th scope="col">Tanggal</th>
-          <th scope="col">Aksi</th>
-        
+      <tr>
+          <th>No</th>
+          <th>Subjek</th>
+          <th>Objek</th>
+          <th>Diagnosa</th>
+          <th>Terapi</th>
+          <th>Pemeriksa</th>
+          <th>Tanggal</th>
+          <th>Aksi</th>
         </tr>
       </thead>
       <tbody>
