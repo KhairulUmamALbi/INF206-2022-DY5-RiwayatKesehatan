@@ -32,4 +32,6 @@
         <p>Copyright &copy; 2022 Riwayat Kesehatan</p>
     </footer>
 </body>
-</html><?php /**PATH C:\xampp\htdocs\INF206-2022-DY5-RiwayatKesehatan\resources\views/login.blade.php ENDPATH**/ ?>
+</html>
+
+<?php /**PATH C:\xampp\htdocs\INF206-2022-DY5-RiwayatKesehatan\resources\views/login.blade.php ENDPATH**/ ?>
