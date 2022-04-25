@@ -17,6 +17,9 @@ Route::get('/', function () {
     return view('login');
 });
 
+Route::get('/registrasi', function () {
+    return view('registrasi');
+});
 
 Route::get('/riwayat', function () {
     return view('Riwayat');
