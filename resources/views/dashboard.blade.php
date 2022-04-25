@@ -5,14 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-</head>
-<body>
 
-</body>
-</html>
     <link rel="stylesheet" href="css/bg.css">
     <!-- bootstrap -->
     <link rel="stylesheet" type="text/css" href="asset/css/bootstrap.css">
+    
     <title>dashboard</title>
 
 </head>
@@ -26,13 +23,16 @@
                         <a class="nav-link" href="dashboard.blank.php">beranda</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="profil.blade.php">profil</a>
+                        <a class="nav-link" href="/riwayat">Layanan</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/profil">Profil</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Panduan Layanan</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="login.blade.php">Log out</a>
+                        <a class="nav-link" href="/">Log out</a>
                     </li>
                 </ul>
                     </div>
