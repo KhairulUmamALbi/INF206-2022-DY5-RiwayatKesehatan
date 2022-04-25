@@ -50,7 +50,7 @@ body{
 
 .container form button{
     width: 100px;
-    padding: 10px 0;
+    padding: 11px 0;
     border: none;
     background-color: #2979ff;
     font-size: 20px;
@@ -59,6 +59,14 @@ body{
     /* left: 50%; */
     /* right: 50%; */
 }
+
+.lupa{
+    position: absolute;
+    right: 0;
+    color: #000000;
+    font-size: 15px;
+}
+
 
 .Logo img{
     height: 90px;
