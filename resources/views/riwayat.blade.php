@@ -61,7 +61,7 @@
           <th>Terapi</th>
           <th>Pemeriksa</th>
           <th>Tanggal</th>
-          <th>Opsi</th>
+          <th>Aksi</th>
         </tr>
       </thead>
       <tbody>
