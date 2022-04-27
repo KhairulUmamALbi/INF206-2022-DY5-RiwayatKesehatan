@@ -17,6 +17,9 @@ Route::get('/', function () {
     return view('login');
 });
 
+Route::get('/registrasi', function () {
+    return view('registrasi');
+});
 
 Route::get('/riwayat', function () {
     return view('Riwayat');
@@ -44,5 +47,13 @@ Route::get('/registrasi', function () {
 
 Route::get('/profil', function () {
     return view('profil');
+});
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+});
+
+Route::get('/lupapass', function () {
+    return view('lupapass');
 });
 
