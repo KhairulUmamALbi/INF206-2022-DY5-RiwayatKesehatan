@@ -13,6 +13,90 @@
   <link rel="stylesheet" type="text/css" href="asset/css/bootstrap.css">
 
 </head>
+<<<<<<< HEAD
+<body> 
+<p ALIGN="CENTER">DAFTAR RIWAYAT KESEHATAN</p>
+<BR>
+
+  <table cellpadding="3" cellspacing="3">
+    <tr>
+      <td><label for="name">1. Nama: </label>
+      <td>:</td>
+      <td><input type="text" id="name" /> </td>
+    </tr>
+
+    <tr>
+      <td>2. Jenis Kelamin </td>
+      <td>:</td>
+      <td>
+        <select >
+          <option>Laki-Laki </option>
+          <option>Perempuan </option>
+        </select>
+      </td>
+    </tr>
+
+    <tr>
+      <td>3. Golongan Darah </td>
+      <td>:</td>
+      <td>
+        <select >
+          <option>A</option>
+          <option>B</option>
+          <option>O</option>
+          <option>AB</option>
+        </select>
+      </td>
+
+
+    <table class="table" style="padding-top:30px;">
+      <thead>
+      <tr>
+          <th>No</th>
+          <th>Subjek</th>
+          <th>Objek</th>
+          <th>Diagnosa</th>
+          <th>Terapi</th>
+          <th>Pemeriksa</th>
+          <th>Tanggal</th>
+          <th>Aksi</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Bicara Pelo</td>
+          <td>Tekanan Darah Tinggi</td>
+          <td>Stroke</td>
+          <td>Bed rest, Paracetamol</td>
+          <td>Dr.Lorem sp.A</td>
+          <td>25-02-2022</td>
+          <td><a href="/riwayat/{{1}}/edit">Edit</a></td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Sering Buang air kecil </td>
+          <td>Gula darah tinggi</td>
+          <td>Diabetes</td>
+          <td>Terapi Insulin</td>
+          <td>Dr.Ahmad Yani sp.PD</td>
+          <td>15-03-2022</td>
+          <td><a href="/riwayat/{{2}}/edit">Edit</a></td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>Demam Tinggi</td>
+          <td>munculnya bintik perdarahan (ptekie) pada kulit</td>
+          <td>Demam Berdarah (DBD)</td>
+          <td>Antibiotik dan Paracetamol</td>
+          <td>Dr.Ahmad Yani sp.PD</td>  
+          <td>21-03-2022</td>
+          <td><a href="/riwayat/{{3}}/edit">Edit</a></td>
+        </tr>
+      
+      </tbody>
+    </table>
+=======
 
 <!-- begin navbar -->
 <nav navbar-expand-lg navbar-light bg-light>
@@ -123,6 +207,7 @@
         </tbody>
       </table>
     </div>
+>>>>>>> 2008107010072
   </div>
 
 
