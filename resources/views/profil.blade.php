@@ -8,6 +8,7 @@
     <title>Profil Pasien</title>
     <!-- <link rel="stylesheet" href="style.css"> -->
     <link rel="stylesheet" href="css/pp.css">
+    <link rel="stylesheet" href="css/text.css">
     <!-- bootstrap -->
     <link rel="stylesheet" type="text/css" href="asset/css/bootstrap.css">
 
@@ -32,7 +33,7 @@
                         <a class="nav-link" href="/profil">Profil</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Panduan Layanan</a>
+                        <a class="nav-link" href="/panduan">Panduan Layanan</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/">Log out</a>
