@@ -57,3 +57,6 @@ Route::get('/lupapass', function () {
     return view('lupapass');
 });
 
+Route::get('/panduan', function () {
+    return view('panduan');
+});
