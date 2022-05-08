@@ -10,6 +10,11 @@
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 	<link rel="stylesheet" href="css/style.css"> 
 </head>
+<style>
+  body {
+   background-color: lightgreen;
+  }
+</style>
 <body> 
 <p ALIGN="CENTER">DAFTAR RIWAYAT KESEHATAN</p>
 <BR>
@@ -104,6 +109,43 @@
           <div class="form-group">
             <label class="control-label" for="subjek">subjek</label?
             <input type="text" name="subjek" class="form-control" id="subjek" required>
+
+  </div>
+  <script>
+    $(document).ready(function){
+      $('#select_all').on('click', function(){
+        if(this.checked){
+          $('.check').each(function(){
+            this.checked = true;
+          })
+        } else{
+          $('.check').each(function(){
+            this.checked = false;
+          })
+        }
+        });
+        $('.check').on('click', function(){
+          if($('.check:checked').length == $('.check').length){
+            $('#select_all').prop('checked', true)
+          } else {
+            $('#select_all').prop('checked', false)
+          }
+        })
+      })
+    
+      function edit(){
+        document.proses.action ='edit.php';
+        document.proses.submit();
+      }
+
+      function hapus(){
+        var conf = confirm('Yakin akan menghapus data?');
+        if(conf){
+          document.proses.action ='del.php';
+        document.proses.submit();
+        }
+      }
+      </script>
 
 </body>
 </html>
