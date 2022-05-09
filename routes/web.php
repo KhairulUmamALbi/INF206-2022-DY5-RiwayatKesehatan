@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Data_pasienController;
 
 /*
 |--------------------------------------------------------------------------
@@ -60,3 +61,6 @@ Route::get('/lupapass', function () {
 Route::get('/panduan', function () {
     return view('panduan');
 });
+Route::get('/data_pasien',[Data_pasienController::class,'index']);
+Route::get('/data_pasien/create',[Data_pasienController::class,'create']);
+Route::post('/data_pasien/store',[Data_pasienController::class,'store']);

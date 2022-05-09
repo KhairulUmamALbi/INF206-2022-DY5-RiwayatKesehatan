@@ -60,7 +60,9 @@
           <th>Pemeriksa</th>
           <th>Tanggal</th>
         </tr>
-        </thead>
+      </thead>
+        
+
         <tbody>
         <tr>
           <th scope="row" >1</th>
