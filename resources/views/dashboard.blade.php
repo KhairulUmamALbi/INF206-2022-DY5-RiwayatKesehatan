@@ -8,6 +8,7 @@
     <title>Document</title>
 
     <link rel="stylesheet" href="css/bg.css">
+    {{-- css text --}}
     <link rel="stylesheet" href="css/text.css">
     <!-- bootstrap -->
     <link rel="stylesheet" type="text/css" href="asset/css/bootstrap.css">
