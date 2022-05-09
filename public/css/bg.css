@@ -3,6 +3,7 @@ body{
     background-image: url("../img/Login.png");
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
     background-repeat: no-repeat;
     height: 100vh;
 
@@ -10,6 +11,7 @@ body{
 
 nav{
     background-color: rgba(0, 0, 255, 0.683);
+    background-attachment: fixed;
 }
 
 .nav-link{
@@ -19,7 +21,7 @@ nav{
 
 .nav-link{
     margin-top: 0px;
-    height: 40px;
+    height: 38px;
     background-color: #fcfbfb;
 }
 .nav-link ul {

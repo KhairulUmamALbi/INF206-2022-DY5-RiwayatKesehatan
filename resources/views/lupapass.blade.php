@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>Reset Password</title>
+    <link rel="stylesheet" href="css/text.css">
 </head>
 <h1>
     <span style="color: #ff0101; font-size: 25px;">    
