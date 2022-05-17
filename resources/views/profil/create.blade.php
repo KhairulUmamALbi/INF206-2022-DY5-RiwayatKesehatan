@@ -121,7 +121,6 @@
             <div class="wrapper">
                 <input class=" btn btn-light" type="submit" name="submit" value="Simpan" />
                 <input class=" btn btn-light" type="reset" name="reset" value="Batal" />
-                <button class=" btn btn-light"><a href="#">Ubah</a></button>
             </div>
     </form>
 

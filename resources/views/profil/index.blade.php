@@ -51,7 +51,7 @@
     <div class="container">
         <div class="row">
             <div class="text-center">
-                <img src="{{url($pf->gambar)}}" class="rounded mx-auto d-block" alt="...">
+                <img src="" class="rounded mx-auto d-block" alt="...">
 
             </div>
 
@@ -59,7 +59,7 @@
 
         <div class="row">
             <div class="text-center">
-                <h5>Nama lengkap <br> {{$pf->nama}}</h5>
+                <h5>Nama lengkap <br> {{$pf->nama_lengkap}}</h5>
                 <h5>No.Telepon <br> {{$pf->no_telepon}}</h5>
                 <h5>Alamat <br> {{$pf->alamat}}</h5>
                 <h5>No.hp/WA <br> {{$pf->no_hp_wa}}</h5>
@@ -68,27 +68,43 @@
                 <h5>No.hp/WA darurat <br> {{$pf->no_hp_wa_darurat}}</h5>
                 <h5>Email <br> {{$pf->email}}</h5>
             </div>
-        </div>
+            <div>
+            <form action="/profil/{{$pf->id}}" method="post">
+                        @csrf
+                        @method('delete')
+                        <input type="submit" value="Hapus Profil" class="btn btn-outline-primary mb-3 mx-auto d-grid">
+                    </form>
+            </div>
+            <div class="d-grid gap-2 mx-auto">
+                <a href="/profil/{{$pf->id}}/edit" class="btn btn-outline-primary">Ubah profil</a>
+            </div>
 
-
-    </div>
-    @endforeach
-
-    <div class="d-grid gap-2 col-6 mx-auto">
-    <a href="/profil/create" class="btn btn-outline-primary">Isi profil</a> 
-    <a href="/data_pasien/create" class="btn btn-outline-primary">Ubah profil</a> 
-    </div>
-
-
-
-
-
+            
 
 
 
+            @endforeach
 
 
-    <!-- akhir tampilan profil pasien  -->
+            <div class="d-grid gap-2 mx-auto mt-3">
+                <a href="/profil/create" class="btn btn-outline-primary">Isi profil</a>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <!-- akhir tampilan profil pasien  -->
 
 </body>
 

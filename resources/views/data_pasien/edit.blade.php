@@ -50,8 +50,8 @@
 
     <!-- form -->
     <form action="/data_pasien/{{$data_pasien->id}}" method="POST">
-     @method('put')
-    @csrf 
+        @method('put')
+        @csrf 
         <div class=" mb-3">
             <label for="nama" class="form-label">nama</label>
             <input type="text" class="form-control" id="nama" name="nama" value="{{$data_pasien->nama}}">
@@ -100,7 +100,7 @@
         <div class="mb-3">
             <label for="tanggal" class="form-label">Tanggal</label>
             <input type="text" class="form-control" id="tanggal" name="tanggal" value="{{$data_pasien->tanggal}}">
-        </div>
+         </div>
 
         <button type="submit" value="update">update</button>
     </form>
