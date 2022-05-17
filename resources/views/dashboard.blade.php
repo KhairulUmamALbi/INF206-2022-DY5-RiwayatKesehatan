@@ -29,7 +29,7 @@
                         <a class="nav-link" href="/dashboard">Beranda</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/riwayat">Layanan</a>
+                        <a class="nav-link" href="/data_pasien">Layanan</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/profil">Profil</a>

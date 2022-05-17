@@ -22,4 +22,22 @@ class Data_pasienController extends Controller
        Data_pasien::create($request->except(['_token','submit']));
        return redirect('/data_pasien');
    }
+
+   public function edit($id){
+       $data_pasien = Data_pasien::find($id);
+       return view('data_pasien.edit', compact(['data_pasien']));
+   }
+
+   public function update($id, Request $request){
+    $data_pasien = Data_pasien::find($id);
+    $data_pasien->update($request->except(['_token','submit']));
+    return redirect('/data_pasien');
+
+   }
+
+   public function destroy($id){
+    $data_pasien = Data_pasien::find($id);
+    $data_pasien->delete();
+    return redirect('/data_pasien');
+   }
 }
