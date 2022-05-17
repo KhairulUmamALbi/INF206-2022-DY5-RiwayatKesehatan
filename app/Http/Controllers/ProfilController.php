@@ -24,7 +24,7 @@ class ProfilController extends Controller
     }
 
     public function edit($id){
-        $data_pasien = Profil::find($id);
+        $profil = Profil::find($id);
         return view('profil.edit', compact(['profil']));
     }
  
@@ -33,5 +33,11 @@ class ProfilController extends Controller
      $profil->update($request->except(['_token','submit']));
      return redirect('/profil');
     }
+
+    public function destroy($id){
+        $profil = Profil::find($id);
+        $profil->delete();
+        return redirect('profil');
+       }
  
 }
