@@ -104,7 +104,11 @@
     </div>
 
 
-    <footer>
+    
+
+</body>
+
+<footer>
     <div class="footer">
         <div class="container-fluid card-footer">
             <div class="col-12">
@@ -117,7 +121,5 @@
     </div>
 
     </footer>
-
-</body>
 </html>
    
