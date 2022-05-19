@@ -47,9 +47,9 @@ Route::get('/registrasi', function () {
     return view('registrasi');
 });
 
-// Route::get('/profil', function () {
-//     return view('profil');
-// });
+Route::get('/profil', function () {
+    return view('profil');
+});
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -61,6 +61,14 @@ Route::get('/lupapass', function () {
 
 Route::get('/panduan', function () {
     return view('panduan');
+});
+
+Route::get('/beritakesehatan', function () {
+    return view('beranda');
+});
+
+Route::get('/panduanlayanan', function () {
+    return view('Panduanlayanan');
 });
 
 Route::get('/data_pasien',[Data_pasienController::class,'index']);
