@@ -48,6 +48,13 @@
 
     <!-- akhir navbar -->
 
+    {{-- search NIK --}}
+
+    <form class=" col-3 -my-px" class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+    </form>
+    {{--end search NIK --}}
 
     <!-- table -->
     <table class="table">
@@ -64,7 +71,6 @@
                 <th scope="col">Pemeriksa</th>
                 <th scope="col">Tanggal</th>
                 <th scope="col">Opsi</th>
-
 
 
             </tr>
@@ -100,7 +106,7 @@
     <!-- akhir table -->
 
     <div class="text-center">
-    <a href="/data_pasien/create" class="btn btn-outline-primary">Tambah data pasien</a> 
+    <a href="/data_pasien/create" class="btn btn-outline-primary">Tambah data pasien</a>
     </div>
 
 
@@ -120,4 +126,3 @@
 
 </body>
 </html>
-   

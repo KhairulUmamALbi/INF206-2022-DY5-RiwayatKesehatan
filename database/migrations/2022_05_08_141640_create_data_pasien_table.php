@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('data_pasien', function (Blueprint $table) {
 
-            
+
             $table->string('nama');
             $table->enum('jenis_kelamin',['L','P']);
             $table->enum('golongan_darah',['A','B','O','AB']);
