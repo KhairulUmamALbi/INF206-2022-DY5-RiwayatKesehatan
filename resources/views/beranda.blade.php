@@ -36,7 +36,7 @@
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav ms-auto">
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#Beranda">Beranda</a>
+                                <a class="nav-link active" aria-current="page" href="/beranda">Beranda</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="/data_pasien">Layanan</a>

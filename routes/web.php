@@ -58,3 +58,5 @@ Route::post('/profil/store', [ProfilController::class,'store']);
 Route::get('/profil/{id}/edit',[ProfilController::class,'edit']);
 Route::put('/profil/{id}',[ProfilController::class,'update']);
 Route::delete('/profil/{id}',[ProfilController::class,'destroy']);
+
+
