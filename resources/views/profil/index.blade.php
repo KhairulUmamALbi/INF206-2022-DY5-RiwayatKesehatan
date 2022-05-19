@@ -106,6 +106,18 @@
 
             <!-- akhir tampilan profil pasien  -->
 
+            <footer>
+    <div class="footer">
+        <div class="container-fluid" <div class="card-footer">
+            <div class="col-12">
+                <div class="text-center">
+                    <p>Copyright &copy; 2020 Riwayat Kesehatan</p>
+                    <p>Call Center : 082211223344</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </body>
 
 </html>
