@@ -5,32 +5,24 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use App\Models\Data_pasien;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class Data_pasienController extends Controller
 {
-<<<<<<< HEAD
-=======
     // untuk menampilkan data pasien
->>>>>>> 2008107010072_tes
     public function index()
     {
         $data_pasien = Data_pasien::all();
         return view('data_pasien.index', compact(['data_pasien']));
     }
 
-<<<<<<< HEAD
-=======
     // create table atau membuat table
->>>>>>> 2008107010072_tes
     public function create()
     {
         return view('data_pasien.create');
     }
 
-<<<<<<< HEAD
-=======
     // untuk menyimpan data profil
->>>>>>> 2008107010072_tes
     public function store(request $request)
     {
         //    dd($request->except(['_token','submit']));
@@ -38,21 +30,15 @@ class Data_pasienController extends Controller
         return redirect('/data_pasien');
     }
 
-<<<<<<< HEAD
-=======
     // untuk edit data profil
->>>>>>> 2008107010072_tes
     public function edit($id)
     {
         $data_pasien = Data_pasien::find($id);
         return view('data_pasien.edit', compact(['data_pasien']));
     }
 
-<<<<<<< HEAD
-=======
 
     // untuk update data profil
->>>>>>> 2008107010072_tes
     public function update($id, Request $request)
     {
         $data_pasien = Data_pasien::find($id);
@@ -60,14 +46,36 @@ class Data_pasienController extends Controller
         return redirect('/data_pasien');
     }
 
-<<<<<<< HEAD
-=======
     // untuk menghapus data profil
->>>>>>> 2008107010072_tes
     public function destroy($id)
     {
         $data_pasien = Data_pasien::find($id);
         $data_pasien->delete();
         return redirect('/data_pasien');
     }
+
+    public function cari(Request $request)
+    {
+        // menangkap data pencarian
+
+        $cari = $request->cari;
+
+    		// mengambil data dari table pegawai sesuai pencarian data
+		$data_pasien = DB::table('data_pasien')
+		->where('nik','like',"%".$cari."%")
+		->paginate();
+
+    		// mengirim data pegawai ke view index
+		// return view('index',['pegawai' => $pegawai]);
+        // return redirect('/data_pasien');
+
+        return view('data_pasien.index', compact(['data_pasien']));
+	}
+
+    // public function search(Request $request)
+    // {
+    //     $keyword = $request->search;
+    //     $data_pasien= data_pasien::where('NIK', 'like', "%" . $keyword . "%")->paginate(5);
+    //     return view('users.index', compact('users'))->with('i', (request()->input('page', 1) - 1) * 5);
+    // }
 }

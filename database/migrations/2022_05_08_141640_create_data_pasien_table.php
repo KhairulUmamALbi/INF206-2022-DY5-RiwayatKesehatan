@@ -24,6 +24,7 @@ return new class extends Migration
             $table->string('objek');
             $table->string('diagnosa');
             $table->text('terapi');
+            $table->text('NIK');
             $table->string('pemeriksa');
             $table->date('tanggal');
             $table->timestamps();

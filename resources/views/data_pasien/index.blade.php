@@ -17,7 +17,7 @@
 
     <!-- navbar -->
         <!-- Navbar -->
-        <nav class="navbar navbar-expand-lg navbar-light.text-$green-500 bg-light shadow-sm fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-light.text-$green-500 bg-light shadow-sm ">
             <div class="container">
                 <a class="navbar-brand" href="#">Riwayat Kesehatan Pasien</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -53,14 +53,16 @@
 
 
     {{-- search NIK --}}
+        <br><br><br>
 
-    <form class=" col-3 -my-px" class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
+    <form class=" col-3 -my-px" class="d-flex" action="/data_pasien/cari" method="GET" >
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" value="{{ old('nik') }}">
+        <button class="btn btn-outline-success" type="submit" value="cari">Search</button>
     </form>
     {{--end search NIK --}}
-
+`
     <!-- table -->
+    <br>
     <table class="table">
         <thead>
             <tr>

@@ -50,6 +50,13 @@ Route::get('/data_pasien/{id}/edit',[Data_pasienController::class,'edit']);
 Route::put('/data_pasien/{id}',[Data_pasienController::class,'update']);
 Route::delete('/data_pasien/{id}',[Data_pasienController::class,'destroy']);
 
+// route cari
+Route::get('/data_pasien/cari',[Data_pasienController::class,'cari']);
+
+//Route search
+// Route::get('/search', [UserController::class, 'search'])->NIK('search');
+
+
 // Route::get('/profil2',[ProfilController::class,'index']);
 
 Route::get('/profil', [ProfilController::class,'index']);
