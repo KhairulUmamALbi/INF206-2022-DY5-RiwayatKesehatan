@@ -31,8 +31,8 @@ Route::get('/lupapass', function () {
     return view('lupapass');
 });
 
-Route::get('/panduan', function () {
-    return view('panduan');
+Route::get('/panduanlayanan', function () {
+    return view('panduanlayanan');
 });
 
 Route::get('/beritakesehatan', function () {

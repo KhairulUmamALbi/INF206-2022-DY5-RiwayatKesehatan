@@ -23,7 +23,7 @@
                     <input type="text" name="username" placeholder="Username"><br>
                     <label>Password</label><br>
                     <input type="password" name="password" placeholder="Password"><br><br>
-                    <button><a class ="nav-link" href="/dashboard">Log in</a></button>
+                    <button><a class ="nav-link" href="/beritakesehatan">Log in</a></button>
                     <button><a class ="nav-link" href="/registrasi">Register</a></button><br>
                     <a class ="lupa" href="/lupapass">Forget Password</a>
                 </form>

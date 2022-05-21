@@ -145,7 +145,7 @@
                 <div class="container-fluid">
                     <ul class="nav justify-content-end nav text-lg ">
                         <li class="nav-item ">
-                            <a class="nav-link" href="/dashboard">Beranda</a>
+                            <a class="nav-link" href="/beranda">Beranda</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/data_pasien">Layanan</a>
