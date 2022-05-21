@@ -1,57 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="style.css"> -->
-    <link rel="stylesheet" href="../../css/pp.css">
-    <link rel="stylesheet" href="../../css/text.css">
-    <!-- bootstrap -->
-    <link rel="stylesheet" type="text/css" href="../../asset/css/bootstrap.css">
-    <title>Edit</title>
-</head>
 
-<body>
 
-    <!-- navbar -->
-    <nav navbar-expand-lg navbar-light bg-light>
-        <div class="row">
-            <div class="col-12">
-                <div class="navbar-brand">
-                    <img src="../../img/Logo.png" width="150">
-                </div>
-                <div class="container-fluid">
-                    <ul class="nav justify-content-end nav text-lg ">
-                        <li class="nav-item ">
-                            <a class="nav-link" href="/dashboard">Beranda</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/data_pasien">Layanan</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/profil">Profil</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/panduan">Panduan Layanan</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/">Log out</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        </div>
-    </nav>
 
-    <!-- akhir navbar -->
+@extends('layouts.mainD')
+
+    @section('container')
 
     <!-- form -->
     <form action="/data_pasien/{{$data_pasien->id}}" method="POST">
         @method('put')
-        @csrf 
+        @csrf
         <div class=" mb-3">
             <label for="nama" class="form-label">nama</label>
             <input type="text" class="form-control" id="nama" name="nama" value="{{$data_pasien->nama}}">
@@ -100,15 +58,18 @@
         <div class="mb-3">
             <label for="tanggal" class="form-label">Tanggal</label>
             <input type="text" class="form-control" id="tanggal" name="tanggal" value="{{$data_pasien->tanggal}}">
-         </div>
+        </div>
 
         <button type="submit" value="update">update</button>
     </form>
     <!-- akhir form -->
 
-    <footer>
+ 
+
+</body>
+<footer>
     <div class="footer">
-        <div class="container-fluid" <div class="card-footer">
+        <div class="container-fluid card-footer">
             <div class="col-12">
                 <div class="text-center">
                     <p>Copyright &copy; 2020 Riwayat Kesehatan</p>
@@ -120,6 +81,9 @@
 
     </footer>
 
-</body>
-
+<<<<<<< HEAD
 </html>
+=======
+
+    @endsection
+>>>>>>> 2008107010072

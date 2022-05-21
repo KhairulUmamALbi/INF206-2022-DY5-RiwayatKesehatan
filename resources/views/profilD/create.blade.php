@@ -7,10 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profil Pasien</title>
     <!-- <link rel="stylesheet" href="style.css"> -->
-    <link rel="stylesheet" href="../../css/pp.css">
-    <link rel="stylesheet" href="../../css/text.css">
+    <link rel="stylesheet" href="../css/pp.css">
+    <link rel="stylesheet" href="../css/text.css">
     <!-- bootstrap -->
-    <link rel="stylesheet" type="text/css" href="../../asset/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../asset/css/bootstrap.css">
 
 </head>
 
@@ -19,7 +19,7 @@
     <div class="row">
         <div class="col-12">
             <div class="navbar-brand">
-                <img src="../../img/Logo.png" width="150">
+                <img src="../img/Logo.png" width="150">
             </div>
             <div class="container-fluid">
                 <ul class="nav justify-content-end nav text-lg ">
@@ -51,8 +51,7 @@
 
 <body>
 
-    <form action="/profil/{{$profil->id}}" method="POST" enctype="multipart/form-data">
-        @method('put')
+    <form action="/profil/store" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="container">
             <div class="row">
@@ -61,8 +60,8 @@
                     <div class="card-header">
                         <h3>Profil Pasien</h3>
                         <form action="" method="post">
-                            <Img src="../../img/Logo.png" class=" img border-radius: 6px">
-                            <p>Upload Foto <input type='file' name='gambar' accept='image/*' value="{{$profil->gambar}}"></p>
+                            <Img src="../img/Logo.png" class=" img border-radius: 6px">
+                            <p>Upload Foto <input type='file' name='gambar' accept='image/*' /></p>
                         </form>
                     </div>
                     <div class="card-body">
@@ -70,61 +69,59 @@
                             <div class="form-group col-md-6">
                                 <label for="inputEmail4">Nama Lengkap</label>
                                 <input type="text" class="form-control" id="inputEmail4" placeholder="#"
-                                    name="nama_lengkap" value="{{$profil->nama_lengkap}}">
+                                    name="nama_lengkap">
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="inputPassword4">Nomor Telepon</label>
                                 <input type="text" class="form-control" id="inputPassword4" placeholder="Nomor Telepon"
-                                    name="no_telepon" value="{{$profil->no_telepon}}">
+                                    name="no_telepon">
                             </div>
 
                             <div class="form-group col-md-6">
                                 <label for="inputEmail4">Alamat</label>
-                                <input type="text" class="form-control" id="inputEmail4" placeholder="#" name="alamat"
-                                    value="{{$profil->alamat}}">
+                                <input type="text" class="form-control" id="inputEmail4" placeholder="#" name="alamat">
                             </div>
 
 
                             <div class="form-group col-md-6">
                                 <label for="inputEmail4">No hp/wa</label>
-                                <input type="text" class="form-control" id="inputEmail4" placeholder="no_hp_wa"
-                                    name="no_hp_wa" value="{{$profil->no_hp_wa}}">
+                                <input type="text" class="form-control" id="inputEmail4" placeholder="no_hp_wa" name="no_hp_wa">
                             </div>
                         </div>
 
                         <div class="form-group col-md-6 mt-3">
-                            <select class="form-select" aria-label="Default select example" name="golongan_darah">
+                            <select class="form-control" name="golongan_darah">
                                 <option selected>Pilih golongan darah</option>
-                                <option value="A" @if($profil->golongan_darah =="A")selected @endif>A</option>
-                                <option value="B" @if($profil->golongan_darah =="B")selected @endif>B</option>
-                                <option value="O" @if($profil->golongan_darah=="O")selected @endif>O</option>
-                                <option value="AB" @if($profil->golongan_darah =="AB")selected @endif>AB</option>
+                                <option>A</option>
+                                <option>B</option>
+                                <option>O</option>
+                                <option>AB</option>
                             </select>
                         </div>
 
                         <div class="form-group col-md-6">
                             <label for="inputEmail4">NIK</label>
-                            <input type="text" class="form-control" id="inputEmail4" placeholder="#" name="NIK" value="{{$profil->NIK}}"
+                            <input type="text" class="form-control" id="inputEmail4" placeholder="#" name="NIK">
                         </div>
 
                         <div class="form-group col-md-6">
                             <label for="inputEmail4">No Hp/WA darurat</label>
-                            <input type="text" class="form-control" id="inputEmail4" placeholder="#"
-                                name="no_hp_wa_darurat" value="{{$profil->no_hp_wa_darurat}}"
+                            <input type="text" class="form-control" id="inputEmail4" placeholder="#" name="no_hp_wa_darurat">
                         </div>
 
                         <div class="form-group col-md-6">
                             <label for="inputEmail4">Email</label>
-                            <input type="text" class="form-control" id="inputEmail4" placeholder="#" name="email" value="{{$profil->email}}"
+                            <input type="text" class="form-control" id="inputEmail4" placeholder="#" name="email">
                         </div>
 
                     </div>
                 </div>
             </div>
 
-          
-            <button type="submit" value="update" class="btn btn-outline-primary mt-3">update</button>
-
+            <div class="wrapper">
+                <input class=" btn btn-light" type="submit" name="submit" value="Simpan" />
+                <input class=" btn btn-light" type="reset" name="reset" value="Batal" />
+            </div>
     </form>
 
 
@@ -154,7 +151,7 @@
 
 <footer>
     <div class="footer">
-        <div class="container-fluid card-footer">
+        <div class="container-fluid" <div class="card-footer">
             <div class="col-12">
                 <div class="text-center">
                     <p>Copyright &copy; 2020 Riwayat Kesehatan</p>
@@ -163,6 +160,4 @@
             </div>
         </div>
     </div>
-
-    </footer>
-</html>
+    </div </footer> </html>

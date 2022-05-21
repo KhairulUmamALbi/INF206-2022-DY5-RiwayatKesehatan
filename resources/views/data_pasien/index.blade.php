@@ -1,55 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
+    @extends('layouts.mainD')
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="style.css"> -->
-    <link rel="stylesheet" href="../../css/pp.css">
-    <link rel="stylesheet" href="../../css/text.css">
-    <!-- bootstrap -->
-    <link rel="stylesheet" type="text/css" href="../../asset/css/bootstrap.css">
-    <title>Edit</title>
-</head>
+    @section('container')
 
-<body>
-
-    <!-- navbar -->
-    <nav navbar-expand-lg navbar-light bg-light>
-        <div class="row">
-            <div class="col-12">
-                <div class="navbar-brand">
-                    <img src="../../img/Logo.png" width="150">
-                </div>
-                <div class="container-fluid">
-                    <ul class="nav justify-content-end nav text-lg ">
-                        <li class="nav-item ">
-                            <a class="nav-link" href="/dashboard">Beranda</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/data_pasien">Layanan</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/profil">Profil</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/panduan">Panduan Layanan</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/">Log out</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        </div>
-    </nav>
-
-    <!-- akhir navbar -->
-
-
+    <form class=" col-3 -my-px" class="d-flex" action="/data_pasien/cari" method="GET" >
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" value="{{ old('nik') }}">
+        <button class="btn btn-outline-success" type="submit" value="cari">Search</button>
+    </form>
+    {{--end search NIK --}}
+`
     <!-- table -->
+    <br>
     <table class="table">
         <thead>
             <tr>
@@ -64,7 +24,6 @@
                 <th scope="col">Pemeriksa</th>
                 <th scope="col">Tanggal</th>
                 <th scope="col">Opsi</th>
-
 
 
             </tr>
@@ -100,11 +59,15 @@
     <!-- akhir table -->
 
     <div class="text-center">
-    <a href="/data_pasien/create" class="btn btn-outline-primary">Tambah data pasien</a> 
+    <a href="/data_pasien/create" class="btn btn-outline-primary">Tambah data pasien</a>
     </div>
 
 
-    <footer>
+    
+
+</body>
+
+<footer>
     <div class="footer">
         <div class="container-fluid card-footer">
             <div class="col-12">
@@ -117,7 +80,10 @@
     </div>
 
     </footer>
-
-</body>
+<<<<<<< HEAD
 </html>
-   
+=======
+
+
+@endsection
+>>>>>>> 2008107010072

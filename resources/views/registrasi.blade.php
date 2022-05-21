@@ -145,7 +145,7 @@
                 <div class="container-fluid">
                     <ul class="nav justify-content-end nav text-lg ">
                         <li class="nav-item ">
-                            <a class="nav-link" href="/dashboard">Beranda</a>
+                            <a class="nav-link" href="/beranda">Beranda</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/data_pasien">Layanan</a>
@@ -174,13 +174,13 @@
             <div class="row">
                 <div class="col-12">
 
-                    <div class="card-header">
+                    <!-- <div class="card-header">
                         <h3>Profil Pasien</h3>
                         <form action="" method="post">
                             <Img src="../img/Logo.png" class=" img border-radius: 6px">
                             <p>Upload Foto <input type='file' name='gambar' accept='image/*' /></p>
                         </form>
-                    </div>
+                    </div> -->
                     <div class="card-body">
                         <div class="form-row">
                             <div class="form-group col-md-6">

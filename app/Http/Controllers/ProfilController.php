@@ -8,36 +8,47 @@ use Illuminate\Http\Request;
 
 class ProfilController extends Controller
 {
-    public function index(){
+    // untuk menampilkan data profil
+    public function index()
+    {
         $profil = Profil::all();
         return view('profil.index', compact(['profil']));
     }
 
-    public function create(){
+    // create table atau membuat table
+    public function create()
+    {
         return view('profil.create');
-    } 
- 
-    public function store(Request $request){
-       
-        Profil::create($request->except(['_token','submit']));
+    }
+
+    // untuk menyimpan data profil
+    public function store(Request $request)
+    {
+
+        Profil::create($request->except(['_token', 'submit']));
         return redirect('/profil');
     }
 
-    public function edit($id){
+    // untuk edit data profil
+    public function edit($id)
+    {
         $profil = Profil::find($id);
         return view('profil.edit', compact(['profil']));
     }
- 
-    public function update($id, Request $request){
-     $profil = Profil::find($id);
-     $profil->update($request->except(['_token','submit']));
-     return redirect('/profil');
+
+    // untuk update data profil
+    public function update($id, Request $request)
+    {
+        $profil = Profil::find($id);
+        $profil->update($request->except(['_token', 'submit']));
+        return redirect('/profil');
     }
 
-    public function destroy($id){
+    // untuk menghapus data profil
+    public function destroy($id)
+    {
         $profil = Profil::find($id);
         $profil->delete();
         return redirect('profil');
-       }
- 
+    }
 }
