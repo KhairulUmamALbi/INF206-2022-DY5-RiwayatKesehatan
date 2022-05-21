@@ -130,7 +130,7 @@
                     $('#select_all').prop('checked', false)
                   }
                 })
-                })
+                }
 
                 function edit() {
                   document.proses.action = 'edit.php';
