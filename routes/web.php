@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Data_pasienController;
+use App\Http\Controllers\ProfilController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,39 +23,47 @@ Route::get('/registrasi', function () {
     return view('registrasi');
 });
 
-Route::get('/riwayat', function () {
-    return view('Riwayat');
-});
-
-Route::get('/riwayat/1/edit', function () {
-    return view('edit');
-});
-
-Route::get('/riwayat/2/edit', function () {
-    return view('edit');
-});
-
-Route::get('/riwayat/3/edit', function () {
-    return view('edit');
-});
-
-Route::put('/riwayat/1', function () {
-    return view('update');
-});
-
-Route::get('/registrasi', function () {
-    return view('registrasi');
-});
-
-Route::get('/profil', function () {
-    return view('profil');
-});
-
-Route::get('/dashboard', function () {
-    return view('dashboard');
+Route::get('/beranda', function () {
+    return view('beranda');
 });
 
 Route::get('/lupapass', function () {
     return view('lupapass');
 });
+
+Route::get('/panduanlayanan', function () {
+    return view('panduanlayanan');
+});
+
+Route::get('/beritakesehatan', function () {
+    return view('beranda');
+});
+
+Route::get('/panduanlayanan', function () {
+    return view('Panduanlayanan');
+});
+
+Route::get('/data_pasien',[Data_pasienController::class,'index']);
+Route::get('/data_pasien/create',[Data_pasienController::class,'create']);
+Route::post('/data_pasien/store',[Data_pasienController::class,'store']);
+Route::get('/data_pasien/{id}/edit',[Data_pasienController::class,'edit']);
+Route::put('/data_pasien/{id}',[Data_pasienController::class,'update']);
+Route::delete('/data_pasien/{id}',[Data_pasienController::class,'destroy']);
+
+// route cari
+Route::get('/data_pasien/cari',[Data_pasienController::class,'cari']);
+
+//Route search
+// Route::get('/search', [UserController::class, 'search'])->NIK('search');
+
+
+// Route::get('/profil2',[ProfilController::class,'index']);
+
+Route::get('/profil', [ProfilController::class,'index']);
+Route::get('/profil/create', [ProfilController::class,'create']);
+Route::post('/profil/store', [ProfilController::class,'store']);
+Route::get('/profil/{id}/edit',[ProfilController::class,'edit']);
+Route::put('/profil/{id}',[ProfilController::class,'update']);
+Route::delete('/profil/{id}',[ProfilController::class,'destroy']);
+
 

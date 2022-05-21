@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/text.css">
     <title>Riwayat Kesehatan</title>
 </head>
 <body>
@@ -22,7 +23,7 @@
                     <input type="text" name="username" placeholder="Username"><br>
                     <label>Password</label><br>
                     <input type="password" name="password" placeholder="Password"><br><br>
-                    <button><a class ="nav-link" href="/dashboard">Log in</a></button>
+                    <button><a class ="nav-link" href="/beritakesehatan">Log in</a></button>
                     <button><a class ="nav-link" href="/registrasi">Register</a></button><br>
                     <a class ="lupa" href="/lupapass">Forget Password</a>
                 </form>
