@@ -1,54 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="style.css"> -->
-    <link rel="stylesheet" href="../../css/pp.css">
-    <link rel="stylesheet" href="../../css/text.css">
-    <!-- bootstrap -->
-    <link rel="stylesheet" type="text/css" href="../../asset/css/bootstrap.css">
-    <title>Edit</title>
-</head>
 
-<body>
 
-        <!-- Navbar -->
-        <nav class="navbar navbar-expand-lg navbar-light.text-$green-500 bg-light shadow-sm fixed-top">
-            <div class="container">
-                <a class="navbar-brand" href="#">Riwayat Kesehatan Pasien</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="row">
-                    <div class="col-xl-12">
-                        <div class="collapse navbar-collapse" id="navbarNav">
-                            <ul class="navbar-nav ms-auto">
-                                <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="/beranda">Beranda</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="/data_pasien">Layanan</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="/profil">Profil</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="/panduanlayanan">Panduan Layanan</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Log out</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </nav>
-        <!-- Navbar akhir -->
+
+@extends('layouts.mainD')
+
+    @section('container')
 
     <!-- form -->
     <form action="/data_pasien/{{$data_pasien->id}}" method="POST">
@@ -102,7 +58,7 @@
         <div class="mb-3">
             <label for="tanggal" class="form-label">Tanggal</label>
             <input type="text" class="form-control" id="tanggal" name="tanggal" value="{{$data_pasien->tanggal}}">
-         </div>
+        </div>
 
         <button type="submit" value="update">update</button>
     </form>
@@ -125,4 +81,9 @@
 
     </footer>
 
+<<<<<<< HEAD
 </html>
+=======
+
+    @endsection
+>>>>>>> 2008107010072

@@ -1,66 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
+    @extends('layouts.mainD')
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="style.css"> -->
-    <link rel="stylesheet" href="../../css/pp.css">
-    <link rel="stylesheet" href="../../css/text.css">
-    <!-- bootstrap -->
-    <link rel="stylesheet" type="text/css" href="../../asset/css/bootstrap.css">
-    <title>Edit</title>
-</head>
+    @section('container')
 
-<body>
-
-    <!-- navbar -->
-        <!-- Navbar -->
-        <nav class="navbar navbar-expand-lg navbar-light.text-$green-500 bg-light shadow-sm fixed-top">
-            <div class="container">
-                <a class="navbar-brand" href="#">Riwayat Kesehatan Pasien</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="row">
-                    <div class="col-xl-12">
-                        <div class="collapse navbar-collapse" id="navbarNav">
-                            <ul class="navbar-nav ms-auto">
-                                <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="/beranda">Beranda</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="/data_pasien">Layanan</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="/profil">Profil</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="/panduanlayanan">Panduan Layanan</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Log out</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </nav>
-        <!-- Navbar akhir -->
-
-
-    {{-- search NIK --}}
-
-    <form class=" col-3 -my-px" class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
+    <form class=" col-3 -my-px" class="d-flex" action="/data_pasien/cari" method="GET" >
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" value="{{ old('nik') }}">
+        <button class="btn btn-outline-success" type="submit" value="cari">Search</button>
     </form>
     {{--end search NIK --}}
-
+`
     <!-- table -->
+    <br>
     <table class="table">
         <thead>
             <tr>
@@ -131,4 +80,10 @@
     </div>
 
     </footer>
+<<<<<<< HEAD
 </html>
+=======
+
+
+@endsection
+>>>>>>> 2008107010072

@@ -1,20 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="style.css"> -->
-    <link rel="stylesheet" href="../css/pp.css">
-    <link rel="stylesheet" href="../css/text.css">
-    <!-- bootstrap -->
-    <link rel="stylesheet" type="text/css" href="../asset/css/bootstrap.css">
-    <title>Tambah data</title>
-</head>
+@extends('layouts.mainD')
 
-<body>
-
+@section('container')
     <!-- navbar -->
     <nav navbar-expand-lg navbar-light bg-light>
         <div class="row">
@@ -50,7 +37,7 @@
 
     <!-- form -->
     <form action="/data_pasien/store" method="POST" enctype="multipart/form-data">
-    @csrf 
+    @csrf
         <div class="mb-3">
             <label for="nama" class="form-label">nama</label>
             <input type="text" class="form-control" id="nama" name="nama">
@@ -123,5 +110,10 @@
         </div>
     </div>
 
+<<<<<<< HEAD
     </footer>
 </html>
+=======
+
+@endsection
+>>>>>>> 2008107010072
