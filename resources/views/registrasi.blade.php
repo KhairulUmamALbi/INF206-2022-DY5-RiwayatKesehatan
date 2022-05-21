@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu registrasi</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/pp.css">
     <link rel="stylesheet" href="css/text.css">
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" type="text/css" href="asset/css/bootstrap.css">
 </head>
+
 <body>
-    <table>
+    <!-- <table>
 
         <tr>
             <td>Nama Lengkap</td>
@@ -113,7 +118,7 @@
         </tr>
 
     </table>
-    <!-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
     <script type="text/javascript">
         $(function () {
             $("#btnSubmit").click(function () {
@@ -128,6 +133,92 @@
         });
     </script> -->
 
-    
+
+
+    <!-- begin navbar -->
+    <nav navbar-expand-lg navbar-light bg-light>
+        <div class="row">
+            <div class="col-12">
+                <div class="navbar-brand">
+                    <img src="../../img/Logo.png" width="150">
+                </div>
+                <div class="container-fluid">
+                    <ul class="nav justify-content-end nav text-lg ">
+                        <li class="nav-item ">
+                            <a class="nav-link" href="/beranda">Beranda</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/data_pasien">Layanan</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/profil">Profil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/panduan">Panduan Layanan</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">Log out</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        </div>
+    </nav>
+    <!-- end navbar -->
+
+    <!-- form -->
+    <form action="/profil/store" method="POST" enctype="multipart/form-data">
+        @csrf
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+
+                    <!-- <div class="card-header">
+                        <h3>Profil Pasien</h3>
+                        <form action="" method="post">
+                            <Img src="../img/Logo.png" class=" img border-radius: 6px">
+                            <p>Upload Foto <input type='file' name='gambar' accept='image/*' /></p>
+                        </form>
+                    </div> -->
+                    <div class="card-body">
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="nama_lengkap">Nama Lengkap</label>
+                                <input type="text" class="form-control" id="nama_lengkap" placeholder="#"
+                                    name="nama_lengkap">
+                            </div>
+
+                            <div class="form-group col-md-6">
+                                <label for="NIK">NIK</label>
+                                <input type="text" class="form-control" id="NIK" placeholder="#" name="NIK">
+                            </div>
+             
+
+                            <div class="form-group col-md-6">
+                                <label for="email">Email</label>
+                                <input type="text" class="form-control" id="email" placeholder="#" name="email">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="password">Password</label>
+                                <input type="password" class="form-control" id="password" placeholder="#" name="email">
+                            </div>
+
+                            
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="wrapper">
+                <input class=" btn btn-light" type="submit" name="submit" value="Simpan" />
+                <input class=" btn btn-light" type="reset" name="reset" value="Batal" />
+            </div>
+    </form>
+
+    <!-- akhir form -->
+
+
 </body>
+
 </html>

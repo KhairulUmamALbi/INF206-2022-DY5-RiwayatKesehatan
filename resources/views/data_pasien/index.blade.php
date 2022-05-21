@@ -114,9 +114,13 @@
     </div>
 
 
-    <footer>
+    
+
+</body>
+
+<footer>
     <div class="footer">
-        <div class="container-fluid" <div class="card-footer">
+        <div class="container-fluid card-footer">
             <div class="col-12">
                 <div class="text-center">
                     <p>Copyright &copy; 2020 Riwayat Kesehatan</p>
@@ -127,6 +131,4 @@
     </div>
 
     </footer>
-
-</body>
 </html>

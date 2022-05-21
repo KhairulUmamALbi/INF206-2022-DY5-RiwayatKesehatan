@@ -9,6 +9,12 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
 
+        <link rel="stylesheet" href="css/pp.css">
+    <link rel="stylesheet" href="css/text.css">
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" type="text/css" href="asset/css/bootstrap.css">
+
     <!-- CSS -->
     <!-- <link rel="stylesheet" href="css/style.css"> -->
     <style>
@@ -23,41 +29,37 @@
 
 <body>
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light.text-$green-500 bg-light shadow-sm fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="/beritakesehatan">Riwayat Kesehatan Pasien</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="row">
-                <div class="col-xl-12">
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav ms-auto">
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="/beritakesehatan">Beranda</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/data_pasien">Layanan</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/profil">Profil</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#Panduan-Layanan">Panduan Layanan</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Log out</a>
-                            </li>
-                        </ul>
-                    </div>
+    <!-- begin navbar -->
+ <nav navbar-expand-lg navbar-light bg-light>
+        <div class="row">
+            <div class="col-12">
+                <div class="navbar-brand">
+                    <img src="../../img/Logo.png" width="150">
+                </div>
+                <div class="container-fluid">
+                    <ul class="nav justify-content-end nav text-lg ">
+                        <li class="nav-item ">
+                            <a class="nav-link" href="/beranda">Beranda</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/data_pasien">Layanan</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/profil">Profil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/panduanlayanan">Panduan Layanan</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">Log out</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
+        </div>
     </nav>
-    <!-- Navbar akhir -->
-
+    <!-- end navbar -->
     <!-- Panduan Layanan -->
 
     <section id="Panduan-Layanan" class="">
