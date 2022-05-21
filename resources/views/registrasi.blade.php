@@ -174,13 +174,13 @@
             <div class="row">
                 <div class="col-12">
 
-                    <div class="card-header">
+                    <!-- <div class="card-header">
                         <h3>Profil Pasien</h3>
                         <form action="" method="post">
                             <Img src="../img/Logo.png" class=" img border-radius: 6px">
                             <p>Upload Foto <input type='file' name='gambar' accept='image/*' /></p>
                         </form>
-                    </div>
+                    </div> -->
                     <div class="card-body">
                         <div class="form-row">
                             <div class="form-group col-md-6">
