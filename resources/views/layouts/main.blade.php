@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="../../css/text.css">
     <!-- bootstrap -->
     <link rel="stylesheet" type="text/css" href="../../asset/css/bootstrap.css">
-    <title>Edit</title>
+    <title>RiwayatKeseahatan</title>
 </head>
 
 <body>

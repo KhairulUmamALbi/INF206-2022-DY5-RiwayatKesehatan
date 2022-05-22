@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\support\Facades\Hash;
 use Illuminate\Support\Facades\DB;
 
+
 class AuthenticateController extends Controller
 {
     /**
@@ -16,7 +17,7 @@ class AuthenticateController extends Controller
      */
     public function index()
     {
-        //
+
     }
 
     /**
@@ -57,7 +58,6 @@ class AuthenticateController extends Controller
      */
     public function show($id)
     {
-
     }
 
     /**
@@ -98,29 +98,31 @@ class AuthenticateController extends Controller
      * proses login
      */
 
-     public function login(Request $request){
-         // ini untuk login ya
+    public function login(Request $request)
+    {
+        // ini untuk login ya
         $hasil = DB::table('users')->where('name', $request->name)->count();
         $password = DB::table('users')->where('name', $request->name)->value('password');
 
 
-        if($hasil == 1){
-            if(Hash::check($request->password, $password)){
+        if ($hasil == 1) {
+            if (Hash::check($request->password, $password)) {
                 // Activate session_start
-                 session_start();
-                 // Set session
-                 $_SESSION['login'] = true;
-                 $_SESSION['name'] = $request->name;
-                 // id
-                 $_SESSION['id'] = DB::table('users')->where('name', $request->name)->value('id');
-                 $_SESSION['name'] = DB::table('users')->where('name', $request->name)->value('name');
-                 $_SESSION['email'] = DB::table('users')->where('name', $request->name)->value('email');
-                 // No telp
-                 $_SESSION['NIK'] = DB::table('users')->where('name', $request->name)->value('NIK');
+                session_start();
+                // Set session
+                $_SESSION['login'] = true;
+                $_SESSION['name'] = $request->name;
+                // id
+                $_SESSION['id'] = DB::table('users')->where('name', $request->name)->value('id');
+                $_SESSION['name'] = DB::table('users')->where('name', $request->name)->value('name');
+                $_SESSION['email'] = DB::table('users')->where('name', $request->name)->value('email');
+                // No NIK
+                $_SESSION['NIK'] = DB::table('users')->where('name', $request->name)->value('NIK');
+                $_SESSION['role'] = DB::table('users')->where('name', $request->name)->value('role');
                 return redirect('/beranda');
             }
-        }else {
+        } else {
             return redirect('/');
         }
-     }
+    }
 }

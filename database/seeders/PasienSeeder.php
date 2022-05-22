@@ -17,7 +17,7 @@ class PasienSeeder extends Seeder
     {
         //
         DB::table('data_pasien')->insert([
-            'nama' => 'Khairul Umam Albi',
+            'name' => 'Khairul Umam Albi',
             'jenis_kelamin' => 'L',
             'golongan_darah' => 'O',
             // 'id' => 1,
@@ -30,46 +30,5 @@ class PasienSeeder extends Seeder
             'tanggal' => '2022-02-01',
         ]);
 
-        DB::table('data_pasien')->insert([
-            'nama' => 'Khairul Umam Albi',
-            'jenis_kelamin' => 'L',
-            'golongan_darah' => 'O',
-            // 'id' => 1,
-            'subjek' => 'test',
-            'objek' => 'tes',
-            'diagnosa' => 'tes',
-            'terapi' => 'tidur',
-            'NIK' => '2008107010072',
-            'pemeriksa' => 'dr.umam',
-            'tanggal' => '2022-02-01',
-        ]);
-
-        DB::table('data_pasien')->insert([
-            'nama' => 'Khairul Umam Albi',
-            'jenis_kelamin' => 'L',
-            'golongan_darah' => 'O',
-            // 'id' => 1,
-            'subjek' => 'test',
-            'objek' => 'tes',
-            'diagnosa' => 'tes',
-            'terapi' => 'tidur',
-            'NIK' => '2008107010072',
-            'pemeriksa' => 'dr.umam',
-            'tanggal' => '2022-02-01',
-        ]);
-
-        DB::table('data_pasien')->insert([
-            'nama' => ' Umam Albi',
-            'jenis_kelamin' => 'L',
-            'golongan_darah' => 'O',
-            // 'id' => 1,
-            'subjek' => 'test',
-            'objek' => 'tes',
-            'diagnosa' => 'tes',
-            'terapi' => 'tidur',
-            'NIK' => '2008107010071',
-            'pemeriksa' => 'dr.umam',
-            'tanggal' => '2022-02-01',
-        ]);
     }
 }

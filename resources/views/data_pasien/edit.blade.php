@@ -7,22 +7,32 @@
     @section('container')
 
     <!-- form -->
+
+            <div class="col-md-12 border">
+                <div class="p-3 py-5">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h4 class="text-right">Edit Data Pasien</h4>
+
+                    </div>
+                </div>
     <form action="/data_pasien/{{$data_pasien->id}}" method="POST">
         @method('put')
         @csrf
         <div class=" mb-3">
             <label for="nama" class="form-label">nama</label>
-            <input type="text" class="form-control" id="nama" name="nama" value="{{$data_pasien->nama}}">
+            <input type="text" class="form-control" id="nama" name="nama" value="{{$data_pasien->name}}">
         </div>
         <div class="mb-3">
             <select class="form-select" aria-label="Default select example" name="jenis_kelamin">
+                <label for="jenis kelamin" class="form-label">jenis kelamin</label>
                 <option selected>Pilih jenis kelamin</option>
-                <option value="L" @if($data_pasien->jenis_kelamin =="L")selected @endif>L</option>
-                <option value="P" @if($data_pasien->jenis_kelamin =="P")selected @endif>P</option>
+                <option value="L" @if($data_pasien->jenis_kelamin =="Pria")selected @endif>L</option>
+                <option value="P" @if($data_pasien->jenis_kelamin =="Wanita")selected @endif>P</option>
             </select>
         </div>
         <div class="mb-3">
         <select class="form-select" aria-label="Default select example" name="golongan_darah">
+            <label for="golongan darah" class="form-label">golongan darah</label>
                 <option selected>Pilih golongan darah</option>
                 <option value="A" @if($data_pasien->golongan_darah =="A")selected @endif>A</option>
                 <option value="B" @if($data_pasien->golongan_darah =="B")selected @endif>B</option>
@@ -64,7 +74,7 @@
     </form>
     <!-- akhir form -->
 
- 
+
 
 </body>
 <footer>
@@ -81,9 +91,5 @@
 
     </footer>
 
-<<<<<<< HEAD
-</html>
-=======
 
     @endsection
->>>>>>> 2008107010072

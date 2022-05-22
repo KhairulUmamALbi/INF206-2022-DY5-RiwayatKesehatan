@@ -2,45 +2,14 @@
 @extends('layouts.mainD')
 
 @section('container')
-    <!-- navbar -->
-    <nav navbar-expand-lg navbar-light bg-light>
-        <div class="row">
-            <div class="col-12">
-                <div class="navbar-brand">
-                    <img src="../img/Logo.png" width="150">
-                </div>
-                <div class="container-fluid">
-                    <ul class="nav justify-content-end nav text-lg ">
-                        <li class="nav-item ">
-                            <a class="nav-link" href="/dashboard">Beranda</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/riwayat">Layanan</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/profil">Profil</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/panduan">Panduan Layanan</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/">Log out</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        </div>
-    </nav>
 
-    <!-- akhir navbar -->
 
     <!-- form -->
     <form action="/data_pasien/store" method="POST" enctype="multipart/form-data">
     @csrf
         <div class="mb-3">
-            <label for="nama" class="form-label">nama</label>
-            <input type="text" class="form-control" id="nama" name="nama">
+            <label for="name" class="form-label">nama</label>
+            <input type="text" class="form-control" id="name" name="name">
         </div>
         <div class="mb-3">
             <select class="form-select" aria-label="Default select example" name="jenis_kelamin">
@@ -79,6 +48,12 @@
             <label for="terapi" class="form-label">Terapi</label>
             <input type="text" class="form-control" id="terapi" name="terapi">
         </div>
+
+        <div class="mb-3">
+            <label for="NIK" class="form-label">NIK</label>
+            <input type="text" class="form-control" id="NIK" name="NIK">
+        </div>
+
         <div class="mb-3">
             <label for="pemeriksa" class="form-label">Pemeriksa</label>
             <input type="text" class="form-control" id="pemeriksa" name="pemeriksa">
@@ -88,13 +63,14 @@
             <input type="text" class="form-control" id="tanggal" name="tanggal">
         </div>
 
+
         <button type="submit" value="tambah data">Submit</button>
     </form>
     <!-- akhir form -->
 
-  
 
-    
+
+
 
 </body>
 
@@ -110,10 +86,5 @@
         </div>
     </div>
 
-<<<<<<< HEAD
-    </footer>
-</html>
-=======
 
 @endsection
->>>>>>> 2008107010072

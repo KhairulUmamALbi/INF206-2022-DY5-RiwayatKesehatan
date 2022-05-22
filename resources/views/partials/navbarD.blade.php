@@ -24,7 +24,7 @@
                                     <a class="nav-link" href="/panduanlayanan">Panduan Layanan</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Log out</a>
+                                    <a class="nav-link" href="/">Log out</a>
                                 </li>
                             </ul>
                         </div>

@@ -12,8 +12,9 @@ class Data_pasienController extends Controller
     // untuk menampilkan data pasien
     public function index()
     {
+        session_start();
         $data_pasien = Data_pasien::all();
-        return view('data_pasien.index', compact(['data_pasien']));
+        return view('data_pasien.index', ['data_pasien' => $data_pasien]);
     }
 
     // create table atau membuat table
