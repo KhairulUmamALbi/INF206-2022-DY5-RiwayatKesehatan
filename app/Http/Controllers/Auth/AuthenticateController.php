@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\support\Facades\Hash;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 
 class AuthenticateController extends Controller
 {
@@ -16,7 +17,7 @@ class AuthenticateController extends Controller
      */
     public function index()
     {
-        //
+
     }
 
     /**
@@ -39,11 +40,14 @@ class AuthenticateController extends Controller
     {
         // Menyimpan data pasiwen ke database
         DB::table('users')->insert([
-            'name' => $request->nama_lengkap,
+            'nama_lengkap' => $request->nama_lengkap,
+            'name' => $request->name,
             'NIK' => $request->NIK,
             'email' => $request->email,
-            'password' => Hash::make($request->password)
-
+            'password' => Hash::make($request->password),
+            'Alamat' => $request->Alamat,
+            'no_hp' => $request->no_hp,
+            'no_hp_wa_darurat' => $request->no_hp_wa_darurat
         ]);
 
         return redirect('/');
@@ -57,7 +61,6 @@ class AuthenticateController extends Controller
      */
     public function show($id)
     {
-
     }
 
     /**
@@ -98,29 +101,42 @@ class AuthenticateController extends Controller
      * proses login
      */
 
-     public function login(Request $request){
-         // ini untuk login ya
+    public function login(Request $request)
+    {
+        // ini untuk login ya
         $hasil = DB::table('users')->where('name', $request->name)->count();
         $password = DB::table('users')->where('name', $request->name)->value('password');
 
 
-        if($hasil == 1){
-            if(Hash::check($request->password, $password)){
+        if ($hasil == 1) {
+            if (Hash::check($request->password, $password)) {
                 // Activate session_start
-                 session_start();
-                 // Set session
-                 $_SESSION['login'] = true;
-                 $_SESSION['name'] = $request->name;
-                 // id
-                 $_SESSION['id'] = DB::table('users')->where('name', $request->name)->value('id');
-                 $_SESSION['name'] = DB::table('users')->where('name', $request->name)->value('name');
-                 $_SESSION['email'] = DB::table('users')->where('name', $request->name)->value('email');
-                 // No telp
-                 $_SESSION['NIK'] = DB::table('users')->where('name', $request->name)->value('NIK');
+                session_start();
+                // Set session
+                $_SESSION['login'] = true;
+                $_SESSION['name'] = $request->name;
+                // id
+                $_SESSION['id'] = DB::table('users')->where('name', $request->name)->value('id');
+                $_SESSION['name'] = DB::table('users')->where('name', $request->name)->value('name');
+                $_SESSION['email'] = DB::table('users')->where('name', $request->name)->value('email');
+                // No NIK
+                $_SESSION['NIK'] = DB::table('users')->where('name', $request->name)->value('NIK');
+                $_SESSION['role'] = DB::table('users')->where('name', $request->name)->value('role');
                 return redirect('/beranda');
             }
-        }else {
+        } else {
             return redirect('/');
         }
-     }
+
+    }
+    public function logout(Request $request)
+    {
+        Auth::logout();
+
+        request()->session()->invalidate();
+
+        request()->session()->regenerateToken();
+
+        return redirect('/');
+    }
 }

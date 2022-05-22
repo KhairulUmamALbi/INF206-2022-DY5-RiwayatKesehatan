@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="../../css/text.css">
     <!-- bootstrap -->
     <link rel="stylesheet" type="text/css" href="../../asset/css/bootstrap.css">
-    <title>Edit</title>
+    <title>RiwayatKeseahatan</title>
 </head>
 
 <body>
@@ -23,6 +23,9 @@
     <div class="container mt-4">
         @yield('container')
     </div>
+
+    <script type="text/javascript" src="search.js"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
 
 
     <script src="../../asset/js/jquery-3.4.1.min.js"></script>

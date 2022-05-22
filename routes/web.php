@@ -2,8 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Data_pasienController;
-use App\Http\Controllers\ProfilController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\Auth\AuthenticateController;
+use App\Http\Controllers\Auth\LogoutController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -58,17 +59,20 @@ Route::get('/data_pasien/cari',[Data_pasienController::class,'cari']);
 // Route::get('/search', [UserController::class, 'search'])->NIK('search');
 
 
-// Route::get('/profil2',[ProfilController::class,'index']);
+// Route::get('/profil2',[UserController::class,'index']);
 
-Route::get('/profil', [ProfilController::class,'index']);
-Route::get('/profil/create', [ProfilController::class,'create']);
+
+Route::get('/profil', [UserController::class,'index']);
+Route::get('/profil/create', [UserController::class,'create']);
 Route::post('/profil/store', [AuthenticateController::class,'store']);
-Route::get('/profil/{id}/edit',[ProfilController::class,'edit']);
-Route::put('/profil/{id}',[ProfilController::class,'update']);
-Route::delete('/profil/{id}',[ProfilController::class,'destroy']);
+Route::get('/profil/{id}/edit',[UserController::class,'edit']);
+Route::put('/profil/{id}',[UserController::class,'update']);
+Route::delete('/profil/{id}',[UserController::class,'destroy']);
 
 
 // Ke halaman setelah login
 Route::post('/beranda', [AuthenticateController::class,'login']);
+Route::get('/logout', [LogoutController::class, 'logout']);
+
 
 

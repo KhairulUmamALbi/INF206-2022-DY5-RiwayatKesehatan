@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('data_pasien', function (Blueprint $table) {
 
             $table->id();
-            $table->string('nama');
+            $table->string('name');
             $table->enum('jenis_kelamin',['L','P']);
             $table->enum('golongan_darah',['A','B','O','AB']);
 
@@ -26,7 +26,6 @@ return new class extends Migration
             $table->text('terapi');
             $table->text('NIK');
             $table->string('pemeriksa');
-            $table->string('password');
             $table->date('tanggal');
             $table->timestamps();
         });

@@ -1,89 +1,124 @@
-    @extends('layouts.mainD')
+@extends('layouts.main')
 
-    @section('container')
+@section('container')
+<section>
 
-    <form class=" col-3 -my-px" class="d-flex" action="/data_pasien/cari" method="GET" >
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" value="{{ old('nik') }}">
-        <button class="btn btn-outline-success" type="submit" value="cari">Search</button>
-    </form>
-    {{--end search NIK --}}
-`
-    <!-- table -->
-    <br>
-    <table class="table">
-        <thead>
-            <tr>
-                <th scope="col">No</th>
-                <th scope="col">Nama</th>
-                <th scope="col">Jenis Kelamin</th>
-                <th scope="col">Golongan darah</th>
-                <th scope="col">Subjek</th>
-                <th scope="col">Objek</th>
-                <th scope="col">Diagnosa</th>
-                <th scope="col">Terapi</th>
-                <th scope="col">Pemeriksa</th>
-                <th scope="col">Tanggal</th>
-                <th scope="col">Opsi</th>
+<!-- table -->
+@if ($_SESSION['role'] == 1)
 
 
-            </tr>
-        </thead>
-        <tbody>
-            @foreach($data_pasien as $dp)
-            <tr>
-                <th scope="row">{{$dp->id}}</th>
-                <!-- <td>{{$dp->id}}</td> -->
-                <td>{{$dp->nama}}</td>
-                <td>{{$dp->jenis_kelamin}}</td>
-                <td>{{$dp->golongan_darah}}</td>
-                <td>{{$dp->subjek}}</td>
-                <td>{{$dp->objek}}</td>
-                <td>{{$dp->diagnosa}}</td>
-                <td>{{$dp->terapi}}</td>
-                <td>{{$dp->pemeriksa}}</td>
-                <td>{{$dp->tanggal}}</td>
-                <td><a href="/data_pasien/{{$dp->id}}/edit">Edit</a></td>
-                <td>
-                    <form action="/data_pasien/{{$dp->id}}" method="post">
-                        @csrf
-                        @method('delete')
-                        <input type="submit" value="delete">
-                    </form>
-                </td>
+<table class="table table-hover table-bordered">
+    <thead>
+        <tr>
+            <th scope="col">No</th>
+            <th scope="col">Nama</th>
+            <th scope="col">Jenis Kelamin</th>
+            <th scope="col">Golongan darah</th>
+            <th scope="col">Subjek</th>
+            <th scope="col">Objek</th>
+            <th scope="col">Diagnosa</th>
+            <th scope="col">Terapi</th>
+            <th scope="col">Pemeriksa</th>
+            <th scope="col">Tanggal</th>
+            <th scope="col">Opsi</th>
 
-            </tr>
-            @endforeach
 
-        </tbody>
-    </table>
-    <!-- akhir table -->
+        </tr>
+    </thead>
+    <tbody>
+        @foreach($data_pasien as $dp)
+        <tr>
+            <th scope="row">{{$dp->id}}</th>
+            <!-- <td>{{$dp->id}}</td> -->
+            <td>{{$dp->name}}</td>
+            <td>{{$dp->jenis_kelamin}}</td>
+            <td>{{$dp->golongan_darah}}</td>
+            <td>{{$dp->subjek}}</td>
+            <td>{{$dp->objek}}</td>
+            <td>{{$dp->diagnosa}}</td>
+            <td>{{$dp->terapi}}</td>
+            <td>{{$dp->pemeriksa}}</td>
+            <td>{{$dp->tanggal}}</td>
+            <td><a href="/data_pasien/{{$dp->id}}/edit">Edit</a></td>
+            <td>
+                <form action="/data_pasien/{{$dp->id}}" method="post">
+                    @csrf
+                    @method('delete')
+                    <input class="btn btn-danger" type="submit" value="delete">
+                </form>
+            </td>
 
-    <div class="text-center">
-    <a href="/data_pasien/create" class="btn btn-outline-primary">Tambah data pasien</a>
+
+
+        </tr>
+        @endforeach
+
+    </tbody>
+</table>
+
+<div class="text-center">
+    <a href="/data_pasien/create" class="btn btn-success" class="btn btn-outline-primary">Tambah data pasien</a>
     </div>
 
+@endif
 
-    
 
-</body>
+@if ($_SESSION['role'] == 0)
 
-<footer>
-    <div class="footer">
-        <div class="container-fluid card-footer">
-            <div class="col-12">
-                <div class="text-center">
-                    <p>Copyright &copy; 2020 Riwayat Kesehatan</p>
-                    <p>Call Center : 082211223344</p>
-                </div>
-            </div>
-        </div>
-    </div>
+    @method('put')
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">No</th>
+            <th scope="col">Nama</th>
+            <th scope="col">Jenis Kelamin</th>
+            <th scope="col">Golongan darah</th>
+            <th scope="col">Subjek</th>
+            <th scope="col">Objek</th>
+            <th scope="col">Diagnosa</th>
+            <th scope="col">Terapi</th>
+            <th scope="col">Pemeriksa</th>
+            <th scope="col">Tanggal</th>
 
-    </footer>
-<<<<<<< HEAD
-</html>
-=======
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach($data_pasien as $dp)
+        @if ($dp->NIK == $_SESSION['NIK'])
+
+
+        <tr>
+            <th scope="row">{{$dp->id}}</th>
+            <!-- <td>{{$dp->id}}</td> -->
+            <td>{{$dp->name}}</td>
+            <td>{{$dp->jenis_kelamin}}</td>
+            <td>{{$dp->golongan_darah}}</td>
+            <td>{{$dp->subjek}}</td>
+            <td>{{$dp->objek}}</td>
+            <td>{{$dp->diagnosa}}</td>
+            <td>{{$dp->terapi}}</td>
+            <td>{{$dp->pemeriksa}}</td>
+            <td>{{$dp->tanggal}}</td>
+
+        </tr>
+        @endif
+        @endforeach
+
+    </tbody>
+</table>
+@endif
+
+@if ($_SESSION['role'] =! 1 && $_SESSION['role'] =! 0)
+
+    <h1>Anda tidak memiliki akses</h1>
+
+@endif
+
+</section>
+
 
 
 @endsection
->>>>>>> 2008107010072
+
+

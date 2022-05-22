@@ -1,66 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
+    @extends('layouts.mainD')
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
-
-        <link rel="stylesheet" href="css/pp.css">
-    <link rel="stylesheet" href="css/text.css">
-
-    <!-- bootstrap -->
-    <link rel="stylesheet" type="text/css" href="asset/css/bootstrap.css">
-
-    <!-- CSS -->
-    <!-- <link rel="stylesheet" href="css/style.css"> -->
-    <style>
-        body {
-            background-image: url("img/Login.png");
-        }
-
-    </style>
-
-    <title>Panduan Layanan</title>
-</head>
-
-<body>
-
-    <!-- begin navbar -->
- <nav navbar-expand-lg navbar-light bg-light>
-        <div class="row">
-            <div class="col-12">
-                <div class="navbar-brand">
-                    <img src="../../img/Logo.png" width="150">
-                </div>
-                <div class="container-fluid">
-                    <ul class="nav justify-content-end nav text-lg ">
-                        <li class="nav-item ">
-                            <a class="nav-link" href="/beranda">Beranda</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/data_pasien">Layanan</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/profil">Profil</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/panduanlayanan">Panduan Layanan</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/">Log out</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        </div>
-    </nav>
-    <!-- end navbar -->
-    <!-- Panduan Layanan -->
+    @section('container')
 
     <section id="Panduan-Layanan" class="">
         <div class="container p-5">
@@ -135,6 +75,5 @@
         <p>Copyright &copy; 2022 Riwayat Kesehatan</p>
     </footer>
     <!-- Akhir footer -->
-</body>
 
-</html>
+    @endsection
