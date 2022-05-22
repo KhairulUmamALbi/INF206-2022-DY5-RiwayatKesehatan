@@ -20,6 +20,7 @@ return new class extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->text('NIK');
+            $table->string('role')->default('pasien');
             $table->rememberToken();
             $table->timestamps();
         });
