@@ -24,6 +24,7 @@ Route::get('/registrasi', function () {
 });
 
 Route::get('/beranda', function () {
+    session_start();
     return view('beranda');
 });
 
@@ -65,5 +66,9 @@ Route::post('/profil/store', [AuthenticateController::class,'store']);
 Route::get('/profil/{id}/edit',[ProfilController::class,'edit']);
 Route::put('/profil/{id}',[ProfilController::class,'update']);
 Route::delete('/profil/{id}',[ProfilController::class,'destroy']);
+
+
+// Ke halaman setelah login
+Route::post('/beranda', [AuthenticateController::class,'login']);
 
 
