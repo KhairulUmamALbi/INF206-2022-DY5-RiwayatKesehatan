@@ -14,16 +14,17 @@
         </div>
 
     </nav>
-    
+
     <section>
         <div class="container">
                 <h1>Login</h1>
-                <form>
+                <form action="/beranda" method="POST">
+                    @csrf
                     <label>Username</label><br>
-                    <input type="text" name="username" placeholder="Username"><br>
+                    <input type="text" name="name" placeholder="Username" required><br>
                     <label>Password</label><br>
-                    <input type="password" name="password" placeholder="Password"><br><br>
-                    <button><a class ="nav-link" href="/beritakesehatan">Log in</a></button>
+                    <input type="password" name="password" placeholder="Password" required><br><br>
+                    <button>Log in</button>
                     <button><a class ="nav-link" href="/registrasi">Register</a></button><br>
                     <a class ="lupa" href="/lupapass">Forget Password</a>
                 </form>

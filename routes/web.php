@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Data_pasienController;
 use App\Http\Controllers\ProfilController;
-
+use App\Http\Controllers\Auth\AuthenticateController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -24,6 +24,7 @@ Route::get('/registrasi', function () {
 });
 
 Route::get('/beranda', function () {
+    session_start();
     return view('beranda');
 });
 
@@ -31,8 +32,8 @@ Route::get('/lupapass', function () {
     return view('lupapass');
 });
 
-Route::get('/panduan', function () {
-    return view('panduan');
+Route::get('/panduanlayanan', function () {
+    return view('panduanlayanan');
 });
 
 Route::get('/beritakesehatan', function () {
@@ -61,9 +62,13 @@ Route::get('/data_pasien/cari',[Data_pasienController::class,'cari']);
 
 Route::get('/profil', [ProfilController::class,'index']);
 Route::get('/profil/create', [ProfilController::class,'create']);
-Route::post('/profil/store', [ProfilController::class,'store']);
+Route::post('/profil/store', [AuthenticateController::class,'store']);
 Route::get('/profil/{id}/edit',[ProfilController::class,'edit']);
 Route::put('/profil/{id}',[ProfilController::class,'update']);
 Route::delete('/profil/{id}',[ProfilController::class,'destroy']);
+
+
+// Ke halaman setelah login
+Route::post('/beranda', [AuthenticateController::class,'login']);
 
 
