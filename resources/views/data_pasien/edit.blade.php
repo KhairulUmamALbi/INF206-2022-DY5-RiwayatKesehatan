@@ -26,8 +26,8 @@
             <select class="form-select" aria-label="Default select example" name="jenis_kelamin">
                 <label for="jenis kelamin" class="form-label">jenis kelamin</label>
                 <option selected>Pilih jenis kelamin</option>
-                <option value="L" @if($data_pasien->jenis_kelamin =="Pria")selected @endif>L</option>
-                <option value="P" @if($data_pasien->jenis_kelamin =="Wanita")selected @endif>P</option>
+                <option value="L" @if($data_pasien->jenis_kelamin =="L")selected @endif>L</option>
+                <option value="P" @if($data_pasien->jenis_kelamin =="P")selected @endif>P</option>
             </select>
         </div>
         <div class="mb-3">

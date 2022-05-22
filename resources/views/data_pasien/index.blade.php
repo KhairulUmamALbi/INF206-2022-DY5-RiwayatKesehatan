@@ -109,6 +109,12 @@
 </table>
 @endif
 
+@if ($_SESSION['role'] =! 1 && $_SESSION['role'] =! 0)
+
+    <h1>Anda tidak memiliki akses</h1>
+
+@endif
+
 </section>
 
 

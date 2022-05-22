@@ -23,10 +23,14 @@
                     <label>Username</label><br>
                     <input type="text" name="name" placeholder="Username" required><br>
                     <label>Password</label><br>
-                    <input type="password" name="password" placeholder="Password" required><br><br>
-                    <button>Log in</button>
-                    <button><a class ="nav-link" href="/registrasi">Register</a></button><br>
-                    <a class ="lupa" href="/lupapass">Forget Password</a>
+                    <center>
+                        <input type="password" name="password" placeholder="Password" required><br><br>
+                    <button>Log in</button><br>
+
+                    </center>
+
+                <p>belum regester? <a href="/register">Register</a> Atau <a class ="lupa" href="/lupapass">Lupa Password</a></p>
+
                 </form>
             </div>
 

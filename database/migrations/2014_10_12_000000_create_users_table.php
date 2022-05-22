@@ -20,7 +20,7 @@ return new class extends Migration
             $table->text('no_hp');
             $table->string('Alamat');
             $table->enum('golongan_darah',['A','B','O','AB']);
-            $table->text('NIK');
+            $table->text('NIK')->unique();;
             $table->text('no_hp_wa_darurat');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();

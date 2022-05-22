@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Data_pasienController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\Auth\AuthenticateController;
+use App\Http\Controllers\Auth\LogoutController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -62,14 +63,16 @@ Route::get('/data_pasien/cari',[Data_pasienController::class,'cari']);
 
 
 Route::get('/profil', [UserController::class,'index']);
-// Route::get('/profil/create', [UserController::class,'create']);
-// Route::post('/profil/store', [AuthenticateController::class,'store']);
-// Route::get('/profil/{id}/edit',[UserController::class,'edit']);
-// Route::put('/profil/{id}',[UserController::class,'update']);
-// Route::delete('/profil/{id}',[UserController::class,'destroy']);
+Route::get('/profil/create', [UserController::class,'create']);
+Route::post('/profil/store', [AuthenticateController::class,'store']);
+Route::get('/profil/{id}/edit',[UserController::class,'edit']);
+Route::put('/profil/{id}',[UserController::class,'update']);
+Route::delete('/profil/{id}',[UserController::class,'destroy']);
 
 
 // Ke halaman setelah login
 Route::post('/beranda', [AuthenticateController::class,'login']);
+Route::get('/logout', [LogoutController::class, 'logout']);
+
 
 

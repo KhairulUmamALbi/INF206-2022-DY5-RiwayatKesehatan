@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\support\Facades\Hash;
 use Illuminate\Support\Facades\DB;
-
+use Illuminate\Support\Facades\Auth;
 
 class AuthenticateController extends Controller
 {
@@ -40,11 +40,14 @@ class AuthenticateController extends Controller
     {
         // Menyimpan data pasiwen ke database
         DB::table('users')->insert([
-            'name' => $request->nama_lengkap,
+            'nama_lengkap' => $request->nama_lengkap,
+            'name' => $request->name,
             'NIK' => $request->NIK,
             'email' => $request->email,
-            'password' => Hash::make($request->password)
-
+            'password' => Hash::make($request->password),
+            'Alamat' => $request->Alamat,
+            'no_hp' => $request->no_hp,
+            'no_hp_wa_darurat' => $request->no_hp_wa_darurat
         ]);
 
         return redirect('/');
@@ -124,5 +127,16 @@ class AuthenticateController extends Controller
         } else {
             return redirect('/');
         }
+
+    }
+    public function logout(Request $request)
+    {
+        Auth::logout();
+
+        request()->session()->invalidate();
+
+        request()->session()->regenerateToken();
+
+        return redirect('/');
     }
 }
