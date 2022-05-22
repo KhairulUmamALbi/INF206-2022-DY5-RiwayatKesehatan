@@ -193,7 +193,7 @@
                                 <label for="NIK">NIK</label>
                                 <input type="text" class="form-control" id="NIK" placeholder="#" name="NIK">
                             </div>
-             
+
 
                             <div class="form-group col-md-6">
                                 <label for="email">Email</label>
@@ -201,10 +201,10 @@
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="password">Password</label>
-                                <input type="password" class="form-control" id="password" placeholder="#" name="email">
+                                <input type="password" class="form-control" id="password" placeholder="#" name="password">
                             </div>
 
-                            
+
 
                     </div>
                 </div>

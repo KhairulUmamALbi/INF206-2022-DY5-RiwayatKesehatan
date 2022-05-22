@@ -15,17 +15,18 @@ return new class extends Migration
     {
         Schema::create('data_pasien', function (Blueprint $table) {
 
-
+            $table->id();
             $table->string('nama');
             $table->enum('jenis_kelamin',['L','P']);
             $table->enum('golongan_darah',['A','B','O','AB']);
-            $table->id();
+
             $table->string('subjek');
             $table->string('objek');
             $table->string('diagnosa');
             $table->text('terapi');
             $table->text('NIK');
             $table->string('pemeriksa');
+            $table->string('password');
             $table->date('tanggal');
             $table->timestamps();
         });
