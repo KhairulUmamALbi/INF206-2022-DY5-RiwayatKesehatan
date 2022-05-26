@@ -69,7 +69,7 @@
 <table class="table">
     <thead>
         <tr>
-            <th scope="col">No</th>
+            {{-- <th scope="col">No</th> --}}
             <th scope="col">Nama</th>
             <th scope="col">Jenis Kelamin</th>
             <th scope="col">Golongan darah</th>
@@ -85,12 +85,13 @@
     <tbody>
 
         @foreach($data_pasien as $dp)
+
         @if ($dp->NIK == $_SESSION['NIK'])
 
 
         <tr>
-            <th scope="row">{{$dp->id}}</th>
-            <!-- <td>{{$dp->id}}</td> -->
+            {{-- <th scope="row">{{$dp->id}}</th>
+            <!-- <td>{{$dp->id}}</td> --> --}}
             <td>{{$dp->name}}</td>
             <td>{{$dp->jenis_kelamin}}</td>
             <td>{{$dp->golongan_darah}}</td>
@@ -107,12 +108,6 @@
 
     </tbody>
 </table>
-@endif
-
-@if ($_SESSION['role'] =! 1 && $_SESSION['role'] =! 0)
-
-    <h1>Anda tidak memiliki akses</h1>
-
 @endif
 
 </section>

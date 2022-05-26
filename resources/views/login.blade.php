@@ -29,7 +29,7 @@
 
                     </center>
 
-                <p>belum regester? <a href="/register">Register</a> Atau <a class ="lupa" href="/lupapass">Lupa Password</a></p>
+                <p>belum regester? <a href="/registrasi">Register</a> Atau <a class ="lupa" href="/lupapass">Lupa Password</a></p>
 
                 </form>
             </div>

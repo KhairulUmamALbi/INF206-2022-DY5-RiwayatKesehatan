@@ -112,7 +112,7 @@ class DatabaseSeeder extends Seeder
             'no_hp'=>'082282102',
             'Alamat'=>'Jl.lingke',
             'golongan_darah'=>'B',
-            'NIK'=>'100810701031',
+            'NIK'=>'20081070',
             'no_hp_wa_darurat'=>'082282132',
             'email'=>'Rofiq@gmail.com',
             'password'=> hash::make('1234'),
