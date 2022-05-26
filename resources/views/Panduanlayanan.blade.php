@@ -37,35 +37,7 @@
             d="M0,224L48,218.7C96,213,192,203,288,170.7C384,139,480,85,576,96C672,107,768,181,864,208C960,235,1056,213,1152,176C1248,139,1344,85,1392,58.7L1440,32L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z">
         </path>
     </svg>
-    <section id="kritik dan saran" class="jumbotron text-center">
-        <div class="container">
-            <div class="row text-center mb-2">
-                <div class="col">
-                    <h2>Kritik dan Saran</h2>
-                </div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-md-5">
-                    <form>
-                        <div class="mb-3">
-                            <label for="name" class="form-label">Nama Lengkap</label>
-                            <input type="text" class="form-control" id="name" aria-describedby="name">
-                        </div>
 
-                        <div class="mb-3">
-                            <label for="email" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="email" aria-describedby="email">
-                        </div>
-
-                        <div class="mb-3">
-                            <label for="pesan" class="form-label">Pesan dan Masukan</label>
-                            <textarea class="form-control" id="pesan" rows="3"></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary"> Kirim</button>
-                    </form>
-                </div>
-            </div>
-    </section>
     <!-- akhir about us -->
 
 

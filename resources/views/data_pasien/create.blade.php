@@ -60,7 +60,7 @@
         </div>
         <div class="mb-3">
             <label for="tanggal" class="form-label">Tanggal</label>
-            <input type="text" class="form-control" id="tanggal" name="tanggal">
+            <input type="date" class="form-control" id="tanggal" name="tanggal">
         </div>
 
 
